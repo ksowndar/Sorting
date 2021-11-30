@@ -1,5 +1,7 @@
 #include <stdio.h>
+
 int partition(int[],int,int);
+
 void quicksort(int a[],int lb,int ub)
 {
     if(lb<ub)
