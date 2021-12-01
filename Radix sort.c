@@ -6,7 +6,7 @@ void countsort(int[],int,int);
 void radixsort(int a[],int n)
 {
     int max=getmax(a,n);
-    for(int pos=1;(max/pos)>0;pos*10)
+    for(int pos=1;(max/pos)>0;pos*=10)
     {
         countsort(a,n,pos);
     }
@@ -28,8 +28,6 @@ int getmax(int a[],int n)
 void countsort(int a[],int n,int pos)
 {
     int count[10]={0};
-    /*for(int i=0;i<10;i++)
-    count[i]=0;*/
     int b[n];
     for(int i=0;i<n;i++)
     {
